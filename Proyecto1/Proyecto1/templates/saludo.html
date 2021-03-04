@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saludos</title>
+</head>
+<body>
+    {% include "nav.html" %}
+    <h1>Hola colegas</h1>
+    <h2>soy {{ name }} {{ surname }}</h2>
+    <h3>LA fecha de hoy es  {{ date.day }} / {{ date.month }} / {{ date.year }} </h3>
+    <h3>Lista con Django</h3>
+<ul></ul>
+    {% if frameworks %}     
+       
+            {% for frame in frameworks %}
+                <li>{{frame}}</li>
+            {% endfor %}
+        
+        {% else %}
+        <p>Ningun framework disponible</p>
+    {% endif %}
+    </ul>
+</body>
+</html>
